@@ -2,7 +2,7 @@
 title: 'Beyond the Grid: Why You Need Mesh Communications'
 description: 'Exploring the resilience of mesh networks, the role of mesh core firmware, and why offline communication matters in a connected world.'
 pubDate: 'Dec 20 2025'
-heroImage: 'https://thelastmile.gotennapro.com/5-reasons-why-mobile-mesh-is-an-essential-military-communications-tool?q=80&w=1200&auto=format&fit=crop'
+heroImage: '../../assets/meshcomms.jpg'
 ---
 
 We live in a world of constant connection. But that connection is fragile. It relies on a massive, centralized infrastructure of cell towers, fiber optic cables, and data centers. If one link in that chain breaks—due to a storm, a power outage, or just being too far into the wilderness—the signal dies.

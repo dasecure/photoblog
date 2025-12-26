@@ -54,3 +54,34 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  notification:
+    # This job needs the 'build' job to finish first
+    needs: [build]
+    runs-on: ubuntu-latest
+    # The 'if: always()' condition ensures this job runs even if the 'build' job fails
+    if: always()
+    steps:
+      - name: Send ntfy notification
+        run: |
+          # Use the job.status to determine the outcome
+          STATUS="${{ needs.build.result }}" # 'success', 'failure', 'cancelled'
+          REPO="${{ github.repository }}"
+          MESSAGE="Workflow in $REPO finished with status: $STATUS"
+          ICON_URL=""
+
+          if [ "$STATUS" == "success" ]; then
+            ICON_URL="ntfy.iotpush.com"
+          elif [ "$STATUS" == "failure" ]; then
+            ICON_URL="ntfy.iotpush.com"
+          else
+            ICON_URL="ntfy.iotpush.com"
+          fi
+
+          # Send the notification using curl
+          curl -H "Title: GitHub Actions Run Complete" \
+               -H "Priority: high" \
+               -H "Tags: github, $STATUS" \
+               -H "Icon: $ICON_URL" \
+               -d "$MESSAGE" \
+               ntfy.iotpush.com github

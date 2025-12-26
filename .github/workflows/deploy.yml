@@ -85,4 +85,4 @@ jobs:
                -H "Tags: github, $STATUS" \
                -H "Icon: $ICON_URL" \
                -d "$MESSAGE" \
-               https://ntfy.iotpush.com/github
+               https://ntfy.iotpush.com/workflows

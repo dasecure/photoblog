@@ -70,12 +70,11 @@ jobs:
           MESSAGE="Workflow in $REPO finished with status: $STATUS"
           ICON_URL=""
 
+          # Set Emojis based on status
           if [ "$STATUS" == "success" ]; then
-            ICON_URL="ntfy.sh"
-          elif [ "$STATUS" == "failure" ]; then
-            ICON_URL="ntfy.sh"
+            TAGS="white_check_mark,github"
           else
-            ICON_URL="ntfy.sh"
+            TAGS="warning,github"
           fi
 
           # Send the notification using curl

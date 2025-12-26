@@ -71,11 +71,11 @@ jobs:
           ICON_URL=""
 
           if [ "$STATUS" == "success" ]; then
-            ICON_URL="ntfy.iotpush.com"
+            ICON_URL="ntfy.sh"
           elif [ "$STATUS" == "failure" ]; then
-            ICON_URL="ntfy.iotpush.com"
+            ICON_URL="ntfy.sh"
           else
-            ICON_URL="ntfy.iotpush.com"
+            ICON_URL="ntfy.sh"
           fi
 
           # Send the notification using curl

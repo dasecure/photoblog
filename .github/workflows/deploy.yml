@@ -55,7 +55,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-NTFY_TOKEN: ${{ secrets.WORKFLOWS }}
   notification:
     # This job needs the 'build' job to finish first
     needs: [build]
@@ -80,7 +79,8 @@ NTFY_TOKEN: ${{ secrets.WORKFLOWS }}
           fi
 
           # Send the notification using curl
-          curl -H "Title: GitHub Actions Run Complete" \
+          curl -H "Authorization: Bearer tk_ilnibjt0r5e7ouo5civfclr96cru6" \
+               -H "Title: GitHub Actions Run Complete" \
                -H "Priority: high" \
                -H "Tags: github, $STATUS" \
                -H "Icon: $ICON_URL" \

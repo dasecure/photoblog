@@ -2,7 +2,7 @@
 title: "Flashing ESP32 on macOS: A Step-by-Step Guide"
 description: "Learn how to flash the ESP32 firmware on a MacBook using esptool, including prerequisites, setup, and troubleshooting."
 pubDate: 2024-06-15
-heroImage: '../../assets/blog-placeholder-1.jpg'
+heroImage: '../../assets/lora.jpg'
 ---
 
 # Introduction

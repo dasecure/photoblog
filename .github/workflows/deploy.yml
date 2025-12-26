@@ -79,7 +79,7 @@ jobs:
           fi
 
           # Send the notification using curl
-          curl -u "vooi:${{ secrets.NTFY_PASSWORD }}"
+          curl -u "vooi:${{ secrets.NTFY_PASSWORD }}" \
                -H "Title: GitHub Actions Run Complete" \
                -H "Priority: high" \
                -H "Tags: github, $STATUS" \

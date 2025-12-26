@@ -55,6 +55,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+NTFY_TOKEN: ${{ secrets.WORKFLOWS }}
   notification:
     # This job needs the 'build' job to finish first
     needs: [build]

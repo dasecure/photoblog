@@ -79,7 +79,7 @@ jobs:
           fi
 
           # Send the notification using curl
-          curl -H "Authorization: Bearer tk_ilnibjt0r5e7ouo5civfclr96cru6" \
+          curl -u "vooi:${{ secrets.NTFY_PASSWORD }}"
                -H "Title: GitHub Actions Run Complete" \
                -H "Priority: high" \
                -H "Tags: github, $STATUS" \
